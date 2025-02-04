@@ -45,16 +45,32 @@ public class EscalasAcordes {
 
         return escalaMayor;
 
-        public static void imprimirEscalaMayor(String[] escalaMayor, String notaBase) {
-            int variableImprimir = 0;
-            System.out.print("Escala mayor de " + notaBase + " es :");
-            while (variableImprimir < escalaMayor.length) {
-                System.out.print(" [" + escalaMayor[variableImprimir] + "] / ");
-                variableImprimir++;
-            }
-            System.out.println();
-        }
-    
+    }
 
+    public static void imprimirEscalaMayor(String[] escalaMayor, String notaBase) {
+        int variableImprimir = 0;
+        System.out.print("Escala mayor de " + notaBase + " es :");
+        while (variableImprimir < escalaMayor.length) {
+            System.out.print(" [" + escalaMayor[variableImprimir] + "] / ");
+            variableImprimir++;
+        }
+        System.out.println();
+    }
+
+    public static String[] obtenerAndImprimirAcordeMayor(String notaBase, String[] escalaMayor) {
+        String[] acordeMayor = new String[3];
+        int variableImprimir = 0;
+
+        acordeMayor[0] = escalaMayor[0];
+        acordeMayor[1] = escalaMayor[2];
+        acordeMayor[2] = escalaMayor[4];
+
+        System.out.print("Acorde mayor de " + notaBase + " esta conformado por:");
+        for (variableImprimir = 0; variableImprimir < acordeMayor.length; variableImprimir++) {
+            System.out.print(" [" + acordeMayor[variableImprimir] + "] / ");
+        }
+        System.out.println();
+
+        return acordeMayor;
     }
 }
