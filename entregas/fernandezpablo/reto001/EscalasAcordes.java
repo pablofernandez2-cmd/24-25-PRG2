@@ -9,5 +9,11 @@ public class EscalasAcordes {
         System.out.println();
         int notaBase = scanner.nextInt();
 
+        if (notaBase >= 1 && notaBase <= 12) {
+            String notaSeleccionada = tonos[notaBase - 1];
+            System.out.println("La nota seleccionada es: " + notaSeleccionada);
+            
+        }
+
     }
 }
