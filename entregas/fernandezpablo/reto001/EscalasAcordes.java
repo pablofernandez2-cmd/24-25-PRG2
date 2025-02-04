@@ -45,5 +45,16 @@ public class EscalasAcordes {
 
         return escalaMayor;
 
+        public static void imprimirEscalaMayor(String[] escalaMayor, String notaBase) {
+            int variableImprimir = 0;
+            System.out.print("Escala mayor de " + notaBase + " es :");
+            while (variableImprimir < escalaMayor.length) {
+                System.out.print(" [" + escalaMayor[variableImprimir] + "] / ");
+                variableImprimir++;
+            }
+            System.out.println();
+        }
+    
+
     }
 }
