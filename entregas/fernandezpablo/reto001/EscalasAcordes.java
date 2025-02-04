@@ -12,7 +12,11 @@ public class EscalasAcordes {
         if (notaBase >= 1 && notaBase <= 12) {
             String notaSeleccionada = tonos[notaBase - 1];
             System.out.println("La nota seleccionada es: " + notaSeleccionada);
-            
+            String[] escalaMayor = obtenerEscalaMayor(notaSeleccionada, tonos);
+            imprimirEscalaMayor(escalaMayor, notaSeleccionada);
+            obtenerAndImprimirAcordeMayor(notaSeleccionada, escalaMayor);
+        } else {
+            System.out.println("Número de nota no válido. Ingresa un valor entre 1 y 12.");
         }
 
     }
