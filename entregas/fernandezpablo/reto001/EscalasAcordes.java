@@ -20,4 +20,30 @@ public class EscalasAcordes {
         }
 
     }
+
+    public static String[] obtenerEscalaMayor(String notaBase, String[] tonos) {
+        int[] intervalosEscalaMayor = { 2, 2, 1, 2, 2, 2, 1 };
+        int posicionNotaBase = -1;
+        int posicionActual = 0;
+        int contadorNotas = 1;
+
+        String[] escalaMayor = new String[8];
+        escalaMayor[0] = notaBase;
+
+        while (posicionActual < tonos.length) {
+            if (tonos[posicionActual] == notaBase) {
+                posicionNotaBase = posicionActual;
+            }
+            posicionActual++;
+        }
+
+        while (contadorNotas < escalaMayor.length) {
+            posicionNotaBase = (posicionNotaBase + intervalosEscalaMayor[contadorNotas - 1]) % tonos.length;
+            escalaMayor[contadorNotas] = tonos[posicionNotaBase];
+            contadorNotas++;
+        }
+
+        return escalaMayor;
+
+    }
 }
