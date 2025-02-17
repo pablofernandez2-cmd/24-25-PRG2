@@ -72,7 +72,22 @@ class EscalasAcordes {
         int nota = new Scanner(System.in).nextInt();
         return NOTAS[nota - 1];
     }
-    
 
-
+    static int[] preguntarEscala() {
+        System.out.println("Elige Escala:");
+        System.out.println("1: Mayor");
+        System.out.println("2: Menor natural");
+        System.out.println("3: Menor armónica");
+        System.out.println("4: Menor melódica");
+        System.out.println("5: Pentatónica mayor");
+        System.out.println("6: Pentatónica menor");
+        System.out.println("7: Dórica");
+        System.out.println("8: Frigia");
+        System.out.println("9: Lidia");
+        System.out.println("10: Mixolidia");
+        System.out.println("11: Locria");
+        System.out.println("12: Por tonos");
+        int escala = new Scanner(System.in).nextInt();
+        return ESCALAS[escala - 1];
+    }
 }
