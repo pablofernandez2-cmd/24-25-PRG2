@@ -66,4 +66,13 @@ class EscalasAcordes {
         }
         return -1;
     }
+
+    static String preguntarNota() {
+        System.out.println("Elige Nota -> 1: Do, 2: Do#, 3: Re ...");
+        int nota = new Scanner(System.in).nextInt();
+        return NOTAS[nota - 1];
+    }
+    
+
+
 }
