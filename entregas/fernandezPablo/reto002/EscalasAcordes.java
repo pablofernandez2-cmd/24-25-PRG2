@@ -32,4 +32,11 @@ class EscalasAcordes {
         System.out.println("Acorde:");
         mostrarSecuencia(acorde);
     }
+
+    static void mostrarSecuencia(String[] secuenciaNotas) {
+        for (String nota : secuenciaNotas) {
+            System.out.print("[" + nota + "] ");
+        }
+        System.out.println();
+    }
 }
