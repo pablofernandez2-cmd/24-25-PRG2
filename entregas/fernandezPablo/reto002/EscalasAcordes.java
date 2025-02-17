@@ -20,4 +20,16 @@ class EscalasAcordes {
         { SEMITONO, TONO, TONO, SEMITONO, TONO, TONO, TONO },
         { TONO, TONO, TONO, TONO, TONO, TONO }
     };
+
+    public static void main(String[] args) {
+        String nota = preguntarNota();
+        int[] escalaElegida = preguntarEscala();
+        String[] escalaGenerada = construirEscala(nota, escalaElegida);
+        String[] acorde = construirAcorde(escalaGenerada);
+
+        System.out.println("Escala en " + nota + ":");
+        mostrarSecuencia(escalaGenerada);
+        System.out.println("Acorde:");
+        mostrarSecuencia(acorde);
+    }
 }
