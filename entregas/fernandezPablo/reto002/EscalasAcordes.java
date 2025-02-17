@@ -39,4 +39,9 @@ class EscalasAcordes {
         }
         System.out.println();
     }
+
+    static String[] construirAcorde(String[] escala) 
+    {
+        return new String[] { escala[0], escala[2], escala[4] }; 
+    }
 }
