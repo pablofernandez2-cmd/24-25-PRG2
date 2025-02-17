@@ -44,4 +44,26 @@ class EscalasAcordes {
     {
         return new String[] { escala[0], escala[2], escala[4] }; 
     }
+
+    static String[] construirEscala(String nota, int[] intervalos) {
+        int posicionEnNotas = obtenerIndiceNota(nota);
+        String[] escala = new String[intervalos.length + 1]; 
+
+        for (int i = 0; i < escala.length; i++) {
+            escala[i] = NOTAS[posicionEnNotas];
+            if (i < intervalos.length) {
+                posicionEnNotas = (posicionEnNotas + intervalos[i]) % NOTAS.length;
+            }
+        }
+        return escala;
+    }
+
+    static int obtenerIndiceNota(String nota) {
+        for (int i = 0; i < NOTAS.length; i++) {
+            if (nota.equals(NOTAS[i])) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
